@@ -41,8 +41,8 @@ nmap <Leader>j <Action>(EditorPageDown)
 nmap <Leader>k <Action>(EditorPageUp)
 
 " Jump tab
-nmap <S-h> :bprevious<CR>
-nmap <S-l> :bnext<CR>
+nmap <S-l> :bprevious<CR>
+nmap <S-h> :bnext<CR>
 
 " Relative line number
 :set relativenumber
