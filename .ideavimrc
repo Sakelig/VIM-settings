@@ -88,6 +88,10 @@ nnoremap <S-Right> :action EditorRightWithSelection<CR>
 nnoremap <S-Up> :action EditorUpWithSelection<CR>
 nnoremap <S-Down> :action EditorDownWithSelection<CR>
 
+" Git windows
+map <leader>gc <Action>(CheckinProject)
+map <leader>gb <Action>(Git.Branches)
+
 " Relative line number
 :set relativenumber
 
