@@ -12,22 +12,46 @@ set scrolloff=5
 " Do incremental searching.
 set incsearch
 
-" Don't use Ex mode, use Q for formatting.
-map Q gq
+" Ignore wrong inputbell
+set visualbell
 
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+" Shows commands typed on bottom screen
+set showmode
+
+" Use hjkl on file explorer
+set nerdtree
+
+" Syncs system copy paste with yy
+set clipboard+=unnamed
 
 " set <leader> to <space>
 let mapleader = " "
 
+" ESC
+imap jk <Esc>
+
 " write & quit
-nmap <Leader>q! :q!<CR>
+nmap <Leader>q :q<CR>
 nmap <Leader>w  :w!<CR>
 
 " Open terminal
 nmap <Leader>t <Action>(ActivateTerminalToolWindow)
 
 nmap <Leader>nh :noh<CR>
+
+" Show help ctrl+p short cut to import stuff
+nmap gh <Action>(ShowErrorDescription)
+
+" Open NERDTree (use q to exit)
+map <leader>x :NERDTreeToggle<CR>
+
+" ------ SEARCHING STUFF ------
+" Search for file
+map <leader>ff <Action>(GotoFile)
+
+" Search for context inside files
+map <leader>fa <Action>(FindInPath)
+
 
 " Comment highlighted line
 vmap <Leader>c <Action>(CommentByLineComment)
@@ -40,14 +64,35 @@ nmap K <Action>(MoveLineUp)
 nmap <Leader>j <Action>(EditorPageDown)
 nmap <Leader>k <Action>(EditorPageUp)
 
-" Jump tab
-nmap <S-l> :bprevious<CR>
-nmap <S-h> :bnext<CR>
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Window splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>wu <Action>(Unsplit)
+
+" Tab navigation
+nnoremap <S-l> :tabnext<CR>
+nnoremap <S-h> :tabprev<CR>\
+
+" Pane navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-l> <C-w>l
+nnoremap <A-k> <C-w>k
+nnoremap <A-j> <C-w>j
+
+" Remap hjkl to arrow keys
+nnoremap <S-Left> :action EditorLeftWithSelection<CR>
+nnoremap <S-Right> :action EditorRightWithSelection<CR>
+nnoremap <S-Up> :action EditorUpWithSelection<CR>
+nnoremap <S-Down> :action EditorDownWithSelection<CR>
 
 " Relative line number
 :set relativenumber
 
 " Highlight copied text
+" Split screen
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
