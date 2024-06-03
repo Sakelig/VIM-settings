@@ -42,6 +42,9 @@ nmap <Leader>nh :noh<CR>
 " Show help ctrl+p short cut to import stuff
 nmap gh <Action>(ShowErrorDescription)
 
+"Go to declaration of file/component hovering
+nmap gt <Action>(GotoDeclaration)
+
 " Open NERDTree (use q to exit)
 map <leader>x :NERDTreeToggle<CR>
 
@@ -60,6 +63,9 @@ vmap <Leader>c <Action>(CommentByLineComment)
 nmap J <Action>(MoveLineDown)
 nmap K <Action>(MoveLineUp)
 
+vmap J <Action>(MoveLineDown)
+vmap K <Action>(MoveLineUp)
+
 " Move page up / down
 nmap <Leader>j <Action>(EditorPageDown)
 nmap <Leader>k <Action>(EditorPageUp)
@@ -69,8 +75,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Window splits
-map <leader>wv <Action>(SplitVertically)
 map <leader>wu <Action>(Unsplit)
+map <leader>wv <Action>(SplitVertically)
 
 " Tab navigation
 nnoremap <S-l> :tabnext<CR>
