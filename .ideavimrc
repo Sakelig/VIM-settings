@@ -48,6 +48,9 @@ nmap gt <Action>(GotoDeclaration)
 " Open NERDTree (use q to exit)
 map <leader>x :NERDTreeToggle<CR>
 
+" Fast console logging
+nmap <Leader>cl oconsole.log()<Esc>i
+
 " ------ SEARCHING STUFF ------
 " Search for file
 map <leader>ff <Action>(GotoFile)
