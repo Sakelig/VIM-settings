@@ -86,10 +86,8 @@ nnoremap <S-l> :tabnext<CR>
 nnoremap <S-h> :tabprev<CR>\
 
 " Pane navigation
-nnoremap <A-h> <C-w>h
-nnoremap <A-l> <C-w>l
-nnoremap <A-k> <C-w>k
-nnoremap <A-j> <C-w>j
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>l <C-w>l
 
 " Remap hjkl to arrow keys
 nnoremap <S-Left> :action EditorLeftWithSelection<CR>
