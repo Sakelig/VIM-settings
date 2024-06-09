@@ -61,6 +61,7 @@ map <leader>fa <Action>(FindInPath)
 
 " Comment highlighted line
 vmap <Leader>c <Action>(CommentByLineComment)
+nmap <Leader>c <Action>(CommentByLineComment)
 
 " Move line up / down
 nmap J <Action>(MoveLineDown)
@@ -100,6 +101,7 @@ map <leader>gc <Action>(CheckinProject)
 map <leader>gb <Action>(Git.Branches)
 
 " Relative line number
+:set number
 :set relativenumber
 
 " Highlight copied text
