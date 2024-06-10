@@ -45,6 +45,9 @@ nmap gh <Action>(ShowErrorDescription)
 "Go to declaration of file/component hovering
 nmap gt <Action>(GotoDeclaration)
 
+"Rollback line
+nmap gr <Action>(Vcs.RollbackChangedLines)
+
 " Open NERDTree (use q to exit)
 map <leader>x :NERDTreeToggle<CR>
 
