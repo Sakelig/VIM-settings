@@ -82,9 +82,12 @@ vnoremap > >gv
 map <leader>wu <Action>(Unsplit)
 map <leader>wv <Action>(SplitVertically)
 
-" Tab navigation
+
 nnoremap <S-l> :tabnext<CR>
 nnoremap <S-h> :tabprev<CR>\
+
+"Move Tab to opposite Pane
+map <Leader>m <Action>(MoveEditorToOppositeTabGroup)
 
 " Pane navigation
 nnoremap <Leader>h <C-w>h
