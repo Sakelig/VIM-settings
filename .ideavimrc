@@ -61,6 +61,8 @@ map <leader>ff <Action>(GotoFile)
 " Search for context inside files
 map <leader>fa <Action>(FindInPath)
 
+"Show selected file in Project Explorer
+map <leader>fs <Action>(SelectInProjectView)
 
 " Comment highlighted line
 vmap <Leader>c <Action>(CommentByLineComment)
