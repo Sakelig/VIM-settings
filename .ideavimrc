@@ -45,6 +45,9 @@ nmap gh <Action>(ShowErrorDescription)
 "Go to declaration of file/component hovering
 nmap gt <Action>(GotoDeclaration)
 
+"Back watever command
+map <leader>b <Action>(Back)
+
 "Rollback line
 nmap gr <Action>(Vcs.RollbackChangedLines)
 
@@ -67,6 +70,9 @@ map <leader>fs <Action>(SelectInProjectView)
 " Comment highlighted line
 vmap <Leader>c <Action>(CommentByLineComment)
 nmap <Leader>c <Action>(CommentByLineComment)
+
+" Rename highlighted element
+nmap <Leader>r <Action>(RenameElement)
 
 " Move line up / down
 nmap J <Action>(MoveLineDown)
