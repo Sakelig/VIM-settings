@@ -45,6 +45,9 @@ nmap gh <Action>(ShowErrorDescription)
 "Go to declaration of file/component hovering
 nmap gt <Action>(GotoDeclaration)
 
+"Move watever
+nmap mf <Action>(Move)
+
 "Back watever command
 map <leader>b <Action>(Back)
 
@@ -65,7 +68,7 @@ map <leader>ff <Action>(GotoFile)
 map <leader>fa <Action>(FindInPath)
 
 "Show selected file in Project Explorer
-map <leader>fs <Action>(SelectInProjectView)
+map <leader>fe <Action>(SelectInProjectView)
 
 " Comment highlighted line
 vmap <Leader>c <Action>(CommentByLineComment)
@@ -133,6 +136,9 @@ Plug 'tpope/vim-commentary'
 
 "" Map <leader>d to start debug
 "map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
