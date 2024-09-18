@@ -54,6 +54,9 @@ map <leader>b <Action>(Back)
 "Rollback line
 nmap gr <Action>(Vcs.RollbackChangedLines)
 
+"Git blame display
+nmap gw <Action>(Annotate)
+
 " Open NERDTree (use q to exit)
 map <leader>x :NERDTreeToggle<CR>
 
