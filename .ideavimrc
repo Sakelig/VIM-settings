@@ -57,13 +57,16 @@ nmap gr <Action>(Vcs.RollbackChangedLines)
 "Git blame display
 nmap gw <Action>(Annotate)
 
-" Open NERDTree (use q to exit)
+" Open NERDTree (use q to exit) / User leader fe to go back to the tree after opening one
 map <leader>x :NERDTreeToggle<CR>
 
 " Fast console logging
 nmap <Leader>cl oconsole.log()<Esc>i
 
 " ------ SEARCHING STUFF ------
+" Search everywhere in intellij system
+map <leader>se <Action>(SearchEverywhere)
+
 " Search for file
 map <leader>ff <Action>(GotoFile)
 
@@ -72,6 +75,9 @@ map <leader>fa <Action>(FindInPath)
 
 "Show selected file in Project Explorer
 map <leader>fe <Action>(SelectInProjectView)
+
+"Open new file/folder
+map <leader>fp <Action>(OpenFile)
 
 " Comment highlighted line
 vmap <Leader>c <Action>(CommentByLineComment)
@@ -106,9 +112,13 @@ nnoremap <S-h> :tabprev<CR>\
 "Move Tab to opposite Pane
 map <Leader>m <Action>(MoveEditorToOppositeTabGroup)
 
-" Pane navigation
+" Panonavigatio
 nnoremap <Leader>h <C-w>h
 nnoremap <Leader>l <C-w>l
+
+" Project navigation
+map <Leader>np <Action>(NextProjectWindow)
+map <Leader>bp <Action>(PreviousProjectWindow)
 
 " Remap hjkl to arrow keys
 nnoremap <S-Left> :action EditorLeftWithSelection<CR>
@@ -121,6 +131,20 @@ map <leader>gc <Action>(CheckinProject)
 map <leader>gb <Action>(Git.Branches)
 map <leader>gh <Action>(Vcs.Show.Log)
 
+" Reload IdeaVim settings
+map <leader>rvs <Action>(IdeaVim.ReloadVimRc.reload)
+
+" Reload Maven setting
+map <leader>rms <Action>(ExternalSystem.ProjectRefreshAction)
+
+" Run anything
+map <Leader>ra <Action>(RunAnything)
+
+" Run class
+nmap <leader>rr <Action>(RunClass)
+
+" Cancel run
+nmap <leader>rt <Action>(Stop)
 
 " Relative line number
 :set number
