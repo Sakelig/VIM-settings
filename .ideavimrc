@@ -34,6 +34,9 @@ imap jk <Esc>
 nmap <Leader>q :q<CR>
 nmap <Leader>w  :w!<CR>
 
+" toggle distraction mode
+nmap <Leader>dm <Action>(ToggleDistractionFreeMode)
+
 " Open terminal
 nmap <Leader>t <Action>(ActivateTerminalToolWindow)
 
@@ -50,6 +53,9 @@ nmap mf <Action>(Move)
 
 "Back watever command
 map <leader>b <Action>(Back)
+
+"Forward watever command
+map <leader>fw <Action>(Forward)
 
 "Collapse code
 nmap <S-Tab> <Action>(CollapseRegion)
@@ -190,3 +196,4 @@ Plug 'tpope/vim-commentary'
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
+  
