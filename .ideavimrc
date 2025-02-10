@@ -75,6 +75,9 @@ nmap <Leader>cl oconsole.log()<Esc>i
 " Fast print line
 nmap <Leader>pl oprintln()<Esc>i
 
+" Clean Up file /imports and indents stuff
+nmap <Leader>cu <Action>(ReformatCode) <Action>(OptimizeImports)
+
 " ------ SEARCHING STUFF ------
 " Search everywhere in intellij system
 map <leader>se <Action>(SearchEverywhere)
@@ -196,4 +199,3 @@ Plug 'tpope/vim-commentary'
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
-  
