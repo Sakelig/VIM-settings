@@ -104,6 +104,9 @@ nmap <Leader>c <Action>(CommentByLineComment)
 " Rename highlighted element
 nmap <Leader>r <Action>(RenameElement)
 
+" Goto Next error
+nmap <Leader>ne <Action>(GotoNextError)
+
 " Move line up / down
 nmap J <Action>(MoveLineDown)
 nmap K <Action>(MoveLineUp)
