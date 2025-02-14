@@ -37,6 +37,9 @@ nmap <Leader>w  :w!<CR>
 " toggle distraction mode
 nmap <Leader>dm <Action>(ToggleDistractionFreeMode)
 
+" update project
+nmap <C-t> <Action>(Vcs.UpdateProject)
+
 " Open terminal
 nmap <Leader>t <Action>(ActivateTerminalToolWindow)
 
