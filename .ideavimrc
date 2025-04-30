@@ -52,7 +52,7 @@ nmap gh <Action>(ShowErrorDescription)
 nmap gt <Action>(GotoDeclaration)
 
 " Show diff
-nmap gd <Action>(Vcs.ShowHistoryForBlock)
+map gd <Action>(Vcs.ShowHistoryForBlock)
 
 "Move watever
 nmap mf <Action>(Move)
