@@ -51,6 +51,9 @@ nmap gh <Action>(ShowErrorDescription)
 "Go to declaration of file/component hovering
 nmap gt <Action>(GotoDeclaration)
 
+" Show diff
+nmap gd <Action>(Vcs.ShowHistoryForBlock)
+
 "Move watever
 nmap mf <Action>(Move)
 
