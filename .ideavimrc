@@ -63,8 +63,6 @@ map <leader>b <Action>(Back)
 "Forward watever command
 map <leader>fw <Action>(Forward)
 
-"Collapse code
-nmap <S-Tab> <Action>(CollapseRegion)
 
 "Rollback line
 nmap gr <Action>(Vcs.RollbackChangedLines)
@@ -84,6 +82,9 @@ nmap <Leader>pl oprintln()<Esc>i
 " Clean Up file /imports and indents stuff
 nmap <Leader>cu <Action>(ReformatCode) <Action>(OptimizeImports)
 
+" Replace highlighted text everywhere with confirmation
+vmap <leader>rh <Action>(FindUsagesInFile)<Action>(Replace)
+
 " ------ SEARCHING STUFF ------
 " Search everywhere in intellij system
 map <leader>se <Action>(SearchEverywhere)
@@ -102,6 +103,9 @@ map <leader>fe <Action>(SelectInProjectView)
 
 "Open new file/folder
 map <leader>po <Action>(OpenFile)
+
+"Open clone repository dialog
+map <leader>pc <Action>(Git.Clone)
 
 "Open recent file/project
 map <leader>pr <Action>(ManageRecentProjects)
@@ -183,7 +187,7 @@ map <Leader>ra <Action>(RunAnything)
 nmap <leader>rc <Action>(RunClass)
 
 " Run test
-nmap <leader>rt <Action>(Run)
+nmap <leader>rg <Action>(Run)
 
 " Cancel run
 nmap <leader>rs <Action>(Stop)
@@ -198,6 +202,15 @@ Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
 
+"DEBUGGER STUFF
+" Step Over
+nnoremap <leader>so :action StepOver<CR>
+
+" Step Into
+nnoremap <leader>si :action StepInto<CR>
+
+" Resume Program
+nnoremap <leader>rp :action Resume<CR>
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
