@@ -21,6 +21,9 @@ set showmode
 " Use hjkl on file explorer
 set nerdtree
 
+" lets me surrond stuff
+set surround
+
 " Syncs system copy paste with yy
 set clipboard+=unnamed
 
@@ -63,6 +66,8 @@ map <leader>b <Action>(Back)
 "Forward watever command
 map <leader>fw <Action>(Forward)
 
+"Switcher
+map <leader><leader> <Action>(Switcher)
 
 "Rollback line
 nmap gr <Action>(Vcs.RollbackChangedLines)
@@ -83,7 +88,7 @@ nmap <Leader>pl oprintln()<Esc>i
 nmap <Leader>cu <Action>(ReformatCode) <Action>(OptimizeImports)
 
 " Replace highlighted text everywhere with confirmation
-vmap <leader>rh <Action>(FindUsagesInFile)<Action>(Replace)
+map <leader>rif <Action>(FindUsagesInFile)<Action>(Replace)
 
 " ------ SEARCHING STUFF ------
 " Search everywhere in intellij system
@@ -92,11 +97,11 @@ map <leader>se <Action>(SearchEverywhere)
 " Search for file
 map <leader>ff <Action>(GotoFile)
 
-" Search for context inside files
+" Search for fontext inside files
 map <leader>fa <Action>(FindInPath)
 
 " Reaplce for everything in files
-map <leader>fra <Action>(ReplaceInPath)
+map <leader>rip <Action>(ReplaceInPath)
 
 "Show selected file in Project Explorer
 map <leader>fe <Action>(SelectInProjectView)
@@ -186,8 +191,14 @@ map <Leader>ra <Action>(RunAnything)
 " Run class
 nmap <leader>rc <Action>(RunClass)
 
-" Run test
+"Run debug class
+nmap <leader>rt <Action>(DebugClass)
+
+" Run again
 nmap <leader>rg <Action>(Run)
+
+"debug again
+nmap <leader>rh <Action>(Debug)
 
 " Cancel run
 nmap <leader>rs <Action>(Stop)
